@@ -7,9 +7,8 @@ class perceptron:
         self.eta = eta;
         self.iterations = iterations;
 
-    #función para realizar el entrenamiento del perceptro.
     def  training(self, data, labels):
-    	self.tetha = np.zeros(1 + data.shape[1])
+    	self.theta = np.zeros(1 + data.shape[1])
     	self.errors_ = []
 
     	for _ in range(self.iterations):
@@ -18,8 +17,8 @@ class perceptron:
     		for xi, target in zip(data,labels):
 
     			update = self.eta * (target - self.predict(xi))
-    			self.tetha[1:] += update * xi
-    			self.tetha[0] += update
+    			self.theta[1:] += update * xi
+    			self.theta[0] += update
     			errors += int(update != 0.0)
 
     		self.errors_.append(errors)
@@ -34,6 +33,6 @@ class perceptron:
 
     def calculation_valor_z(self, data):
 
-    	z = np.dot(data, self.tetha[1:] + self.tetha[0])
+    	z = np.dot(data, self.theta[1:] + self.theta[0])
 
     	return z

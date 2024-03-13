@@ -1,14 +1,3 @@
-#
-#
-#	Author: Edgard Diaz
-#	date:	12-07-2020
-#
-#
-#	data classification using a simple layer perceptron
-#
-#
-#
-
 from files import process_file
 from perceptron import perceptron
 from ploting import graph
@@ -16,7 +5,7 @@ from ploting import graph
 
 if __name__ == '__main__':
 
-	epacas = 10000; #iteraciones
+	epochs = 10000;
 	eta = 0.01;	#factor de aprendizaje
 	#path dataset
 	path = "iris.data"
@@ -27,7 +16,7 @@ if __name__ == '__main__':
 
 
 	#initialize perceptron
-	obj_perceptron = perceptron(eta, epocas)
+	obj_perceptron = perceptron(eta, epochs)
 	#training perceptron
 	model = obj_perceptron.training(data,labels);
 

@@ -1,9 +1,4 @@
-#	Author: Edgard Díaz
-#	date: 12 - 07 - 2020
-#
-#	This function upload and read the data set iris 
-#
-import pandas as pd #importar la libreria panda para  procesar el data set iris.
+import pandas as pd
 import numpy as np
 class process_file:
 

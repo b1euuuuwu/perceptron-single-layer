@@ -8,7 +8,7 @@ class graph:
 	def plotting_decision_regions(selft,X, y, classifier, resolution=0.002):
 		
 		markers = ('s', 'o', 'x', '^', 'v')
-		colors = ('green', 'blue', 'lightgreen', 'gray', 'cyan')
+		colors = ('red', 'blue', 'lightred', 'gray', 'cyan')
 		cmap = ListedColormap(colors[:len(np.unique(y))])
 
     	# plot the decision surface
@@ -39,8 +39,8 @@ class graph:
 	def plotting_errors(self,model):
 
 		plt.plot(range(1, len(model.errors_) + 1), model.errors_, marker = 's');
-		plt.xlabel("Numero de epocas")
-		plt.ylabel("Numero de actualizaciones");
+		plt.xlabel("Number of epochs")
+		plt.ylabel("Number of actualizations");
 
 		plt.tight_layout()
 		plt.show()
