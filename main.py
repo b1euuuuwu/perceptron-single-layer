@@ -6,7 +6,7 @@ from ploting import graph
 if __name__ == '__main__':
 
 	epochs = 10000;
-	eta = 0.01;	#factor de aprendizaje
+	eta = 0.01;	#learning factor
 	#path dataset
 	path = "iris.data"
 

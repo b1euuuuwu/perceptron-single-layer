@@ -26,7 +26,7 @@ class perceptron:
     	return self
 
 
-    #función de activacion
+    #activation function
     def predict(self, data):
     	phi = np.where(self.calculation_valor_z(data) >= 0.0, 1, -1)
     	return phi

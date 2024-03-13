@@ -32,7 +32,7 @@ class graph:
 		for idx, cl in enumerate(np.unique(y)):
 
 			plt.scatter(x=X[y == cl, 0], y=X[y == cl, 1], alpha=0.8, c=cmap(idx), edgecolor='black', marker=markers[idx], label=cl)
-		plt.title("Perceptron Single layer - Decision regions")
+		plt.title("Single Layer Perceptron - Decision Regions")
 		plt.tight_layout()
 		plt.show()
 		plt.savefig("result.png")
